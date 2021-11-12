@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  text-align: center;
+}
+
+.Header-Link{
+  position: relative;
+  top: 0px;
+}
+.link-container{
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+}
+
+.cart-and-login-link {
+  font-size: 25px;
+  
+}
+.cart-and-login-link a{
+  margin: 20px;
+}
+

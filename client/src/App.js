@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import {  Switch, Route } from 'react-router-dom';
+import Home from './components/Home'
+import Account from './components/Account'
+import Cart from './components/Cart'
+import './App.css'
+import About from './components/homepage/About'
 
+import Products from './components/homepage/Products'
+import ShippingPolicy from './components/homepage/ShippingPolicy'
+import ContactUs from './components/ContactUsPage/ContactUs'
 function App() {
+  
+
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        
+        <Switch>
+          
+          <Route exact path="/" >
+              <Home />
+          </Route>
+          <Route  path="/account" >
+              <Account />
+          </Route>
+          <Route  path="/cart" >
+              <Cart />
+          </Route>
+          <Route  path="/about">
+                <About />
+            </Route>
+            <Route  path="/products">
+                <Products />
+            </Route>
+            <Route path="/policy">
+                <ShippingPolicy />
+            </Route>
+            <Route path="/contactus">
+                <ContactUs />
+            </Route>
+         
+        </Switch>
+      </div>
+    </>
   );
 }
 
