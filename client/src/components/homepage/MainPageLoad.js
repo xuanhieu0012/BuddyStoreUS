@@ -6,13 +6,13 @@ import  {ImageData}   from "./ImageData"
 import ImageSlider from './ImageSlider'
 import VideoProduct from './VideoProduct';
 import Testimoials from './Testimonials';
-function MainPageLoad(){
+function MainPageLoad({handleCartData}){
 
     return <div>
         <NavBar />
         <ImageSlider ImageData={ImageData}/>
-        {/* <BestProduct /> */}
-        <FeatureProduct />
+        <BestProduct handleCartData={handleCartData}/>
+        <FeatureProduct handleCartData={handleCartData}/>
         <VideoProduct />
         <Testimoials />
     </div>

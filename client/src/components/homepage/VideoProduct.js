@@ -13,7 +13,7 @@ function VideoProduct(){
             src={fucoidan}
             title="Crackle video player" 
             frameBorder="0" 
-            allow="accelerometer; encrypted-media; autoplay;" allowFullScreen>
+            sandbox="true">
         </iframe>
         <img src={logoTrans} alt="BuddyStore-Logo" />
 </div>  

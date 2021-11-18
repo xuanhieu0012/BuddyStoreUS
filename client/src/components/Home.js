@@ -3,7 +3,7 @@ import React from 'react';
 import MainPageLoad from './homepage/MainPageLoad'
 import TopHeader from './TopHeader'
 
-function Home(){
+function Home({handleCartData}){
 
     return <div>
         <div className="Header-Link">
@@ -11,7 +11,7 @@ function Home(){
         </div>
         <div>
             
-            <MainPageLoad />
+            <MainPageLoad handleCartData={handleCartData} />
            
         </div>
     </div>

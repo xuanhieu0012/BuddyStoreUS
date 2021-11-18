@@ -10,7 +10,7 @@ function TopHeader(){
             <Link to="/"><img className="logo-image" src={logo2} alt="logo" /></Link>
         </div>
         <div>
-            <SearchBar />
+           
         </div>
 
         <div className="cart-and-login-link">

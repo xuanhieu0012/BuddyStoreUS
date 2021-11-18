@@ -1,19 +1,22 @@
 import React,{useState} from 'react';
 
-function SearchBar(){
-const [search, setSearch] = useState("")
+function SearchBar({setSearchWord}){
 
-function handleSearchSubmit(){
 
-}
+function handlesearch(e){
+    setSearchWord(e.target.value)
 
-    return <div className="inputSearch">
-    <form onSubmit={handleSearchSubmit}>
-        
-        <input className="searchBar" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search Products" />
-        <input type="submit"  className="search-button" value="Search" />
-    </form>
-</div>
+  }
+
+    return  <div className="searchbar">
+    <label htmlFor="search" id="aboveSearchBar"></label>
+        <input
+        type="text"
+        id="search"
+        placeholder="Search for Product..."
+        onChange={handlesearch}
+        />
+    </div>
 }
 
 

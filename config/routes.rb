@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :orders
+  resources :migrations
   resources :question_from_customers
   resources :carts
   resources :profiles

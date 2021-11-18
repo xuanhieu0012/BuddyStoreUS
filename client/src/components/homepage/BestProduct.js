@@ -1,7 +1,7 @@
 import React,{ useState, useEffect} from 'react';
-
-
-function BestProduct(){
+import ImageSliderForFeatureProduct from './ImageSliderForFeatureProduct'
+import {Link} from 'react-router-dom'
+function BestProduct({handleCartData}){
     const [randomProduct, setRandomProduct] = useState()
     const id = Math.floor(Math.random() * (10 - 1) + 1)
    
@@ -14,23 +14,31 @@ function BestProduct(){
         })
     },[])
 const imageForRandomProduct = randomProduct === undefined ? null : randomProduct.image_url.map(image => <img src={image} alt={randomProduct.name}/>)
-console.log(id)
-console.log(randomProduct)
-const displayRandomProduct = randomProduct === undefined ? null : <div className="random-product"> 
-                                                                        <div className="random-product-image-container">
-                                                                        {imageForRandomProduct}
-                                                                        </div>
-                                                                        <h2>{randomProduct.name}</h2>
-                                                                        {/* <img src={randomProduct.image_url} alt={randomProduct.name}/> */}
-                                                                        
-                                                                        <p>{randomProduct.description}</p>
-                                                                        <p>{randomProduct.quantity === null ? "Out Of Stock" : randomProduct.quantity}</p>
-                                                                        <p>{randomProduct.price} </p>
 
+const displayRandomProduct = randomProduct === undefined ? null : (<div className="ProductCardDetails">
+                                                                    <div>
+                                                                        {/* <img className="ProductImgDetails" src={productDetail.image_url} alt={productDetail.name} /> */}
+                                                                        <ImageSliderForFeatureProduct ImageData={randomProduct.image_url} />
                                                                     </div>
+                                                                    <div className="ProductDetailsTextContainer">
+                                                                        <div className="flowerTitle">
+                                                                            <h3>{randomProduct.name}</h3>
+                                                                        </div>
+                                                                            <p id="Price">Price: ${randomProduct.price} Quantity: {randomProduct.quantity === null ? "Out Of Stock": randomProduct.quantity}</p>
+                                                                            
+                                                                        <div className="description">
+                                                                            
+                                                                            {`${randomProduct.description.substring(0, 200)}...`}<Link to={`/product/${randomProduct.id}`}>More details</Link>
+                                                                        </div>
+                                                                        <div className="buttonDetailPage">
+                                                                        {randomProduct.quantity === null ? <h3>Currently out of stock </h3> :<button onClick={()=> handleCartData(randomProduct)}>Add To Cart</button>}
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                    </div>)
 
     return <div className="BestProductContainer">
-        <h2>Best Selling</h2>
+        <h1>Best Selling</h1>
         {displayRandomProduct}
     </div>
 

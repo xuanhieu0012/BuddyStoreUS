@@ -88,7 +88,7 @@ PRESERVATION
 
 Store in a cool and dry place.
 Keep out of reach of children.",quantity: 29,store_id: s1.id, image_url: ['https://cdn.shopify.com/s/files/1/0267/5772/6399/products/57_800x.jpg?v=1622607132', 'https://cdn.shopify.com/s/files/1/0267/5772/6399/products/57_1_800x.jpg?v=1622607132'])
-u1 = User.create(username: "xuanhieu", password: "xuanhieu")
+u1 = User.create(username: "xuanhieu", password: "xuanhieu", addmin: true)
 
 Review.create(content_desc: "it's taste good", rating: 5,user_id: u1.id, product_id: p1.id)
 puts "Done Seeding"

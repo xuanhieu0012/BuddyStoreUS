@@ -4,7 +4,7 @@ import React from 'react';
 function Testimoials(){
 
     return <div>
-        <h1>Testimoials</h1>
+        <h1>TESTIMONIALS</h1>
         <div className="testimoials-image-container">
             <img src="https://cdn.shopify.com/s/files/1/0267/5772/6399/files/122702543_3299862300069397_2354332217632114286_n_400x.jpg?v=1603580443" alt="buddyStore"/>
             <img src="https://cdn.shopify.com/s/files/1/0267/5772/6399/files/122461961_3412342122215673_2056275821197471126_o_5f0cd8a2-dcf1-4413-9b85-456704acf80b_400x.jpg?v=1603835039" alt="buddyStore"/>

@@ -14,7 +14,7 @@ const ImageSliderForFeatureProduct = ({ImageData}) =>{
         setImage(image === 0 ? length - 1 : image -1)
     }
     return (
-        <section className="image-feature-product-container">
+        <section className="ProductImgDetails">
             <FiChevronLeft className ="left-arrow-feature" onClick={prevSlide}/>
             <FiChevronRight className ="right-arrow-feature" onClick={nextSlide} />
         {ImageData.map((slide, index) =>{

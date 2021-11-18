@@ -3,28 +3,15 @@ import AuthenticatedApp from './loginandlogout/AuthenticatedApp'
 import UnthenticatedApp from './loginandlogout/UnthenticatedApp'
 import { BrowserRouter as Router } from 'react-router-dom'
 import TopHeader from './TopHeader'
-function Account(){
-    const [currentUser, setCurrentUser] = useState(null)
-    const [authChecked, setAuthChecked] = useState(false)
+import NavBar from './homepage/NavBar';
+function Account({currentUser, setCurrentUser, authChecked}){
+    
 
-    useEffect(() =>{
-        fetch('/me',{
-            credentials: 'include'
-        })
-        .then(res =>{
-            if (res.ok){
-                res.json().then(user => {
-                    setCurrentUser(user)
-                    setAuthChecked(true)
-                })
-            }else {
-                setAuthChecked(true)
-            }
-        })
-    },[])
+
     if (!authChecked) {return <div>Not Check</div>}
     return <div>
         <TopHeader />
+        <NavBar />
         <Router>
             {currentUser ? (
             [

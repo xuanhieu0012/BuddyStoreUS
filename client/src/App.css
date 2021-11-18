@@ -69,23 +69,91 @@
 .BestProductContainer{
   position: relative;
   top: 20px;
-  height: 550px;
+  height: 600px;
 }
 
 .imageProduct-feature{
-  height: 180px;
-  width: 180px;
+  height: 400px;
+  width: 400px;
+  left: 0px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px grey;
+
 
 }
 .image-feature-product-container{
     height: 300px;
     width: 300px;
 }
-.each-image-product {
+.each-image-product-container {
   position: relative;
-  height: 250px;
-  width: 250px;
-  margin: 20px;
+  margin: 0px 15px 0px 15px;
+  width: 160px;
+  display: flex;
+  padding: 60px;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ProductImg{
+  height: 280px;
+  width: 230px;
+  object-fit: cover;
+  border-radius: 1px;
+}
+.ProductImg:hover{
+  box-shadow: 12px 12px 15px rgba(33,33,33,.2); 
+}
+.ProductDetails{
+  font-family: Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 12pt;
+  color: #192841;
+  display: flex;
+  border-bottom: 0.01em solid rgb(99, 99, 99);
+  position: relative;
+  align-items: center;
+  min-height: 100px;
+  justify-content: space-between;
+  width: 230px;
+}
+.buttonContainer{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 15px;
+  width: 230px;
+  
+}
+.nameProduct a{
+  font-size: 15px;
+  font: inherit;
+  text-decoration: none;
+}
+
+.buttonContainer button{
+ 
+  color: white;
+  border-style: hidden;
+  background-color: #192841;
+  /* #FFC0CB */
+  
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(145, 143, 143);
+  z-index: 6;
+  height: 30px;
+    width: 123px;
+  
+  
+}
+.buttonContainer button:hover{
+  background-color: #f70202;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.buttonContainers button:active{
+  background-color: #192841;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 .text-feature{
   position: absolute;
@@ -94,29 +162,35 @@
   top: 200px;
 }
 .feature-product-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  border-top: 1px solid #192841;
+}
+.ProductImgDetails{
+  width: 450px;
+  height:400px;
+  margin-left: 20px;
 }
 .left-arrow-feature{
   position:absolute;
   z-index: 10;
-  font-size: 40px;
-  top: 70px;
-  left: 22px;
-  color: rgb(33 184 202 / 65%);
+  font-size: 80px;
+  top: 200px;
+  left: -10px;
+  color: solid black
 }
 
 .right-arrow-feature{
   position:absolute;
   z-index: 10;
-  font-size: 40px;
-  top: 70px;
-  right: -27px;
-  color: rgb(33 184 202 / 65%);
+  font-size: 80px;
+  top: 200px;
+  left: 485px;
+
+  color:  solid black
 }
 .Logo-banner-video img{
   width:90%;
@@ -124,9 +198,7 @@
   color: red;
   
 }
-.crackleIFrame{
 
-}
 .Logo-banner-video{
   position: relative;
   top: 50px;
@@ -186,4 +258,423 @@
   text-align: right;
   
   
+}
+
+.all-product-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.product-page-container h1{
+  border-bottom: 1px solid black;
+}
+.shipping-policy-container img{
+  width: 100%;
+  margin-bottom:20px;
+  object-fit: cover;
+}
+
+.shipping-policy-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shipping-policy-text{
+  width: 650px;
+  text-align: left;
+  margin-bottom: 100px;
+}
+
+
+
+
+.shipping-policy-text p{
+  align-items: flex-start;
+}
+.about-us-text-container{
+  text-align: left;
+  margin-left:300px;
+  width: 1000px;
+
+}
+.cartpageImage{
+  margin-top:10px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.header{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+}
+.imageContainer {
+  width: 250px;
+  height: 230px;
+  position: relative;
+  margin: 10px 50px 10px 50px;
+}
+.cartContainer{
+  display: flex;
+  align-items: center;
+}
+.CartFlowerName{
+  
+  width: 400px;
+}
+.CartFlowerName{
+  font-size:20px
+}
+.name-card-text{
+  position: relative;
+  margin-left: 20px;
+
+}
+.cartQuantity{
+  width: 260px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 100px;
+  margin-right: 80px;
+  font-size: 20px
+}
+.cartPrice{
+  font-size: 20px;
+  margin-left:100px;
+}
+.cartTotal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: right;
+  margin-right: 50px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.cartTotal button{
+  position: relative;
+  top: 20px;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #dd4b39
+}
+.cartTotal button:hover{
+  opacity: 0.75;
+}
+.whole-cartContainer{
+  background: whitesmoke;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black
+}
+.header div h2{
+  color: blue;
+}
+
+.ProductCardDetails{
+  display: flex;
+  padding: 30px;
+  position: relative;
+  flex-direction: row;
+}
+/* .ProductImgDetails{
+  height: 400px;
+  width: 400px;
+  left: 0px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px grey;
+} */
+.ProductDetailsTextContainer{
+  font-size: 20px;
+  padding-left: 100px;
+  margin: 0px 0px 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+}
+.ProductDetailsTextContainer .flowerTitle h3{
+  /* color: rgb(250, 149, 166); */
+  margin: 5px 0px 10px 0px;
+  color: #67d6f8;
+  font-size: 50px;
+  /* text-decoration: underline 0.04em #192841; */
+  text-shadow: 2px 2px rgb(243, 13, 13);
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.ProductDetailsTextContainer .description{
+  color: #192841;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  width: 850px;
+}
+.ProductDetailsTextContainer .buttonDetailPage button {
+  color: white;
+  border-style: hidden;
+  background-color: #192841;
+  /* #FFC0CB */
+  padding-top: 1px;
+  padding-bottom: 0.50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(145, 143, 143);
+  font-size: 20px;
+  width: 200px;
+  height: 30px;
+}
+
+.ProductDetailsTextContainer .buttonDetailPage button:hover{
+  background-color: #ff002b;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.ProductDetailsTextContainer .buttonDetailPage button:active{
+  background-color: #192841;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+.product-detail-container{
+  position: relative;
+  top: 20px;
+  margin-bottom: 150px;
+}
+.review-container{
+  display: flex;
+  
+  margin-bottom: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+.each-review-container{
+  border: 1px solid rgb(15, 164, 250);
+  margin-bottom: 10px;
+  padding: auto;
+  width: 600px;
+}
+.user-rating{
+  width: 590px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-content{
+  float: left;
+}
+.busterCards{
+  color: red;
+}
+.searchbar input{
+  width: 351px;
+  height: 30px;
+  border-radius: 10px;
+}
+.search-bar-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(250, 0, 0);
+}
+.off {
+  color: #ccc;
+}
+
+.star{
+  size: 100px;
+}
+.form-review textarea {
+  width: 300px;
+  height: 100px;
+  border:1px solid rgb(15, 164, 250);
+  margin-bottom: 20px;
+}
+.text-and-submit-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-and-submit-form button{
+  position: relative;
+  left: 20px;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px
+}
+.text-and-submit-form button:hover{
+  background-color: rgb(36, 224, 177);
+
+}
+.w3-modal{
+  position: relative;
+  display: flex;
+}
+
+.review-edit-delete-button{
+  display: flex;
+  justify-content: flex-end;
+}
+.Edit-button-container{
+  margin-right: 10px;
+}
+.Delete-button-container{
+  margin-right: 10px;
+}
+.Delete-button-container button{
+  border-radius: 5px
+}
+.Delete-button-container button:hover{
+  background-color: rgba(247, 74, 74, 0.7);
+}
+
+.Edit-button-container button{
+  border-radius: 5px
+}
+.Edit-button-container button:hover{
+  background-color: rgb(36, 224, 177);
+}
+
+.navbar-admin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+.navbar-admin a{
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.each-product-container{
+  display: flex;
+  height: 250px;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+.product-container{
+  border: 1px solid rgb(15, 164, 250);
+  margin-bottom:10px;
+}
+.List-product-container{
+  margin: 10px;
+}
+
+.each-product-container div img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.description-list-container{
+  width: 200px;
+  height: 200px;
+  text-align: left;
+  position: relative;
+  left: 80px;
+}
+.product-list-name{
+  width: 300px;
+}
+.product-list-price{
+  width: 50px;
+}
+.product-list-image{
+  width: 200px;
+}
+.product-list-quantity{
+  width: 50px;
+}
+.Product-List-Header{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  left: 70px;
+  width: 1200px;
+}
+.product-list-price-header{
+  position: relative;
+}
+.update-product-form{
+  display: flex;
+  align-items: center;
+}
+.update-product-form div label{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.description-input-container label{
+  position: relative;
+  top: -10px;
+}
+.button-form button{
+  position: relative;
+  margin-left: 50px;
+}
+.header-question-list{
+  display: flex;
+  align-items: center;
+  
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+}
+.each-question-container{
+  display: flex;
+  justify-content: space-around;
+    align-items: center;
+}
+.question-list-id{
+  position: relative;
+  left: -80px
+}
+.question-list-name{
+  position: relative;
+  left: -160px
+}
+.question-list-email{
+  position: relative;
+  left: -180px;
+}
+.question-list-description{
+  position: relative;
+  left: -250px;
+}
+.ListProduct-button-container .btn{
+  margin-right:10px;
+}
+.ListProduct-button-container{
+  position: relative;
+  right: -20px;
+}
+.question-description{
+  width: 250px;
+  text-align: left;
+}
+.question-name{
+  width: 250px;
+  text-align: center;
+}
+.question-email{
+  width: 200px;
+  text-align: left;
 }
