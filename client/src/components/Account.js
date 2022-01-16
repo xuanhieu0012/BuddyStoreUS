@@ -4,7 +4,7 @@ import UnthenticatedApp from './loginandlogout/UnthenticatedApp'
 import { BrowserRouter as Router } from 'react-router-dom'
 import TopHeader from './TopHeader'
 import NavBar from './homepage/NavBar';
-function Account({currentUser, setCurrentUser, authChecked}){
+function Account({currentUser, setCurrentUser, authChecked, setProfile}){
     
 
 
@@ -16,7 +16,7 @@ function Account({currentUser, setCurrentUser, authChecked}){
             {currentUser ? (
             [
                 <AuthenticatedApp  setCurrentUser={setCurrentUser}
-                currentUser={currentUser}/>
+                currentUser={currentUser} setProfile={setProfile}/>
             ]
                 ): (
             [

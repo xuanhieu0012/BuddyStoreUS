@@ -7,7 +7,8 @@ function Cart({cartData, handleRemoveCartList, handleCartData, setCartData, curr
     console.log(cartData)
     const itemPrice = cartData.reduce((current, productData) => current + productData.price * productData.qty, 0)
     const taxRate = 8
-    const subtotal = (itemPrice + (itemPrice * (taxRate /100))).toFixed(2)
+    const shippingRate = 10
+    const subtotal = (itemPrice+ shippingRate + (itemPrice * (taxRate /100))).toFixed(2)
 
     const displayCartDataFlower= cartData.map(eachProduct => <CartProduct
         key={eachProduct.id} 
@@ -17,6 +18,8 @@ function Cart({cartData, handleRemoveCartList, handleCartData, setCartData, curr
         totalPrice={totalPrice}
         handleCartData={handleCartData}
         />)
+        
+        
         function handleCheckout(){
             console.log(cartData)
             fetch('/orders',{
@@ -35,7 +38,7 @@ function Cart({cartData, handleRemoveCartList, handleCartData, setCartData, curr
                 <TopHeader />
                 <NavBar />
 
-               <img className="cartpageImage" src="https://cdn.shopify.com/s/files/1/0535/5569/articles/Free_Shipping_Over_100-BLOG_600x.png?v=1585254601" />
+               <img className="cartpageImage" src="https://www.utopiaeco.com/images/FREE%20SHIPPING.jpg" />
             <h1>Shopping Cart </h1>
             <div className="whole-cartContainer">
                 {cartData.length === 0 ? null: (<div className="header">
@@ -62,7 +65,10 @@ function Cart({cartData, handleRemoveCartList, handleCartData, setCartData, curr
                     <br />
                     Tax: {taxRate}%
                     <br />
-                    Subtotal: ${subtotal}
+                    Shipping: $ {subtotal > 100 ? "Free" : shippingRate}
+                    <br />
+                    Subtotal: ${subtotal > 100 ? subtotal - shippingRate : subtotal}
+                    
                     <button onClick={handleCheckout}>Check Out</button>
                     </div>}
                 

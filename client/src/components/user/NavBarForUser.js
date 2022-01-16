@@ -5,7 +5,7 @@ function NavBarForUser(){
 
     return <div className="navbar-admin">
     
-    <Link  to="/orders">Orders</Link>
+    <Link  to="/orders">Past Orders</Link>
     
     <Link  to="/profiles">Profiles</Link>
    

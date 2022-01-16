@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
             render json: "Product not found", status: :unprocessable_entity
         end
     end
+    def create
+        
+        Product.create(product_params)
+
+    end
 
     def show 
         product = Product.find_by(id: params[:id])
@@ -33,5 +38,8 @@ class ProductsController < ApplicationController
     private
     def update_params
         params.permit(:name, :image_url, :price, :description, :quantity, :id)
+    end
+    def product_params
+        params.require(:product).permit(:name , :price, :description, :quantity, :store_id, image_url: [])
     end
 end

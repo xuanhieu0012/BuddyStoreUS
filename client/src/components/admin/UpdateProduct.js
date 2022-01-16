@@ -21,7 +21,7 @@ function UpdateProduct(){
             <div className='product-list-price-header'>
                     <h2>Price</h2>
             </div>
-            <div className="">
+            <div className="product-list-quantity-header">
                 <h2>Quantity</h2>
             </div>
             <div className="">

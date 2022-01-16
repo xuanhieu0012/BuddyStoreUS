@@ -16,13 +16,13 @@ function ListProduct({product, setToggleUpdate}){
     return <div className="product-container">
     <div className="each-product-container">
         <div className="product-list-image">
-            <img src={image_url[0]} alt={name} />
+            <img src={image_url === null ? null : image_url[0]} alt={name} />
         </div>
         <div className="product-list-name">
                 <h3>{name}</h3>
         </div>
         <div className='product-list-price'>
-                <p>{price}</p>
+                <p>$ {price}</p>
         </div>
         <div className="product-list-quantity">
                 {quantity === null ? 0 : quantity}

@@ -4,19 +4,23 @@ class OrdersController < ApplicationController
         if current_user.addmin
             render json: Order.all, status: :ok
         else
-            render json: current_user.orders.as_json(except: ["created_at", "updated_at"]) , status: :ok
+            
+            render json: current_user.orders, status: :ok
         end
     end
 
     def create
-        byebug
+            
             o = Order.create(order_params)
-            render json: o, status: :created
+            
+            params[:order].each {|orderx|  OrderProduct.create(order_id: o.id, product_id: orderx[:id], qty: orderx[:qty])}
+            
         
     end
 
     private 
     def order_params
-        params.permit(:user_id,:total,  order: [:name, :price, :qty])
+
+        params.permit(:user_id, :total)
     end
 end

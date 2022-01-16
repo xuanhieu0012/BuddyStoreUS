@@ -31,7 +31,7 @@ function Login({ setCurrentUser }) {
 return (
     <div className="login">
         
-    <form className="w-2/3 bg-white p-8 max-w-md space-y-4" onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={handleSubmit}>
         <div className="Login-form">
         <h1 className="login-text">Login</h1>
         <p>

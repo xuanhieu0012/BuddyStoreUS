@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :order_products
   resources :orders
   resources :migrations
   resources :question_from_customers

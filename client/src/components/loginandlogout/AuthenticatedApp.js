@@ -6,7 +6,8 @@ import QuestionList from '../admin/QuestionList'
 import NavBarForUser from '../user/NavBarForUser'
 import ProfileUser from '../user/ProfileUser'
 import OrdersUser from '../user/OrderUser'
-function AuthenticatedApp({ currentUser, setCurrentUser }) {
+import AddProduct from '../admin/AddProduct'
+function AuthenticatedApp({ currentUser, setCurrentUser, setProfile }) {
   
     console.log(currentUser)
     const handleLogout = () => {
@@ -35,13 +36,19 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
             <Route path='/question'>
                 <QuestionList />
             </Route> 
+            <Route path='/orderslist'>
+                <OrdersUser />
+            </Route>
+            <Route path='/addProduct'>
+                <AddProduct />
+            </Route>
         </div> )    : (<div className="for-User"> 
             <NavBarForUser />
             <Route path="/orders">
                 <OrdersUser />
             </Route>
             <Route path='/profiles'>
-                <ProfileUser />
+                <ProfileUser currentUser={currentUser} setProfile={setProfile}/>
             </Route>
         </div>)}
     </div>

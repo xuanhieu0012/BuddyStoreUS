@@ -15,6 +15,7 @@ function App() {
   const [cartData, setCartData]= useState(cartFromLocalStorage) //=> storeCart data[]
   const [currentUser, setCurrentUser] = useState(null)
   const [authChecked, setAuthChecked] = useState(false)
+  const [profile, setProfile] = useState(false)
   useEffect(() =>{
     fetch('/me',{
         credentials: 'include'
@@ -29,7 +30,7 @@ function App() {
             setAuthChecked(true)
         }
     })
-},[])
+},[profile])
 
 
 
@@ -68,7 +69,7 @@ function App() {
               <Home handleCartData={handleCartData}/>
           </Route>
           <Route  path="/account" >
-              <Account currentUser={currentUser} setCurrentUser={setCurrentUser} authChecked={authChecked} setAuthChecked={setAuthChecked}/>
+              <Account currentUser={currentUser} setCurrentUser={setCurrentUser} authChecked={authChecked} setAuthChecked={setAuthChecked} setProfile={setProfile}/>
           </Route>
           <Route  path="/cart" >
               <Cart cartData={cartData} handleRemoveCartList={handleRemoveCartList} handleCartData={handleCartData} setCartData={setCartData} currentUser={currentUser}/>

@@ -7,7 +7,8 @@ function NavBarForAdmin({setToggleUpdate}){
     
     <Link  to="/updateProduct">Update Product</Link>
     <Link  to="/question">Message from Customer</Link>
-    <Link  to="/orders">Order List</Link>
+    <Link  to="/orderslist">Order List</Link>
+    <Link to="/addProduct">Add New Product</Link>
    
     
 </div>
