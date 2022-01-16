@@ -38,7 +38,7 @@ function Cart({cartData, handleRemoveCartList, handleCartData, setCartData, curr
                 <TopHeader />
                 <NavBar />
 
-               <img className="cartpageImage" src="https://www.utopiaeco.com/images/FREE%20SHIPPING.jpg" />
+               <img className="cartpageImage" src="https://www.utopiaeco.com/images/FREE%20SHIPPING.jpg" alt='cart'/>
             <h1>Shopping Cart </h1>
             <div className="whole-cartContainer">
                 {cartData.length === 0 ? null: (<div className="header">
