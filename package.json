@@ -1,6 +1,7 @@
 {
     "name": "buddystoreus",
     "description": "Build scripts for Heroku",
+  
     "scripts": {
         "build": "npm install --prefix client && npm run build --prefix client",
         "clean": "rm -rf public",
