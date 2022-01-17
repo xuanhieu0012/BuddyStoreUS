@@ -1,9 +1,7 @@
 {
     "name": "buddystoreus",
     "description": "Build scripts for Heroku",
-  
     "scripts": {
-        
         "build": "npm install --prefix client && npm run build --prefix client",
         "clean": "rm -rf public",
         "deploy": "cp -a client/build/. public/",
@@ -11,6 +9,7 @@
     },
     "dependencies": {
         "react-router-dom": "^5.2.0",
+        "serve": "^13.0.2",
         "switch": "^0.0.0"
     }
 }
